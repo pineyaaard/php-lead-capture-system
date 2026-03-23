@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical AI Workflows</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --card-bg: #1e293b;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid #334155;
+        }
+        section:last-child { border-bottom: none; }
+        
+        /* Hero */
+        h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .subheadline {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+        ul.hero-bullets {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+        ul.hero-bullets li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        ul.hero-bullets li::before {
+            content: '✓';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Form */
+        .email-form {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 600px) {
+            .email-form { flex-direction: column; }
+        }
+        input[type="email"] {
+            flex: 1;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px solid #475569;
+            background: var(--bg-color);
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+        input[type="email"]:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        button {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover { background-color: var(--accent-hover); }
+        .microcopy { font-size: 0.85rem; color: var(--text-muted); }
+        
+        /* Two Column Lists */
+        .split-lists {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        @media (max-width: 600px) {
+            .split-lists { grid-template-columns: 1fr; }
+        }
+        h2 { font-size: 2rem; margin-bottom: 30px; }
+        h3 { font-size: 1.3rem; margin-bottom: 20px; color: var(--accent); }
+        
+        .list-block ul { padding-left: 20px; color: var(--text-muted); }
+        .list-block li { margin-bottom: 10px; }
+
+        /* FAQ */
+        .faq-item { margin-bottom: 30px; }
+        .faq-item h4 { font-size: 1.2rem; margin: 0 0 10px 0; }
+        .faq-item p { color: var(--text-muted); margin: 0; }
+        
+        /* CTA Section */
+        .cta-section { text-align: center; background: var(--card-bg); border-radius: 16px; padding: 60px 20px; margin: 80px 0;}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section id="hero">
+            <h1>Practical AI workflows that save hours every week</h1>
+            <p class="subheadline">Get a free guide with 7 practical AI workflows that help you cut repetitive work, move faster, and get more from AI without adding more noise.</p>
+            
+            <ul class="hero-bullets">
+                <li>Cut repetitive work with 7 practical workflows</li>
+                <li>Move faster without building a complex AI stack</li>
+                <li>Apply the ideas immediately – no theory dump</li>
+            </ul>
+
+            <form class="email-form" action="YOUR_FORMSPREE_OR_MAILERLITE_LINK_HERE" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Get the Free Workflow Guide</button>
+            </form>
+            <p class="microcopy">Free guide. No fluff. No spam.</p>
+        </section>
+
+        <section id="who-its-for">
+            <h2>Who It's For</h2>
+            <p style="color: var(--text-muted); margin-bottom: 40px;">This guide is for people who want practical leverage from AI – not more tools, noise, or theory.</p>
+            
+            <div class="split-lists">
+                <div class="list-block">
+                    <h3>Perfect for:</h3>
+                    <ul>
+                        <li>Founders wearing too many hats</li>
+                        <li>Creators trying to move faster without more chaos</li>
+                        <li>Operators buried under repetitive work</li>
+                        <li>Solo builders and lean teams who need practical leverage</li>
+                        <li>People who want usable workflows, not AI hype</li>
+                    </ul>
+                </div>
+                <div class="list-block">
+                    <h3>Not for:</h3>
+                    <ul>
+                        <li>People looking for deep technical AI training</li>
+                        <li>Teams trying to build complex systems from day one</li>
+                        <li>People who want theory instead of practical workflows</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-different">
+            <h2>Why This Is Different</h2>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Most AI guides add more noise, more tools, and more theory. This one is built for practical use.</p>
+            <div class="list-block">
+                <ul>
+                    <li>No fluff or trend-chasing</li>
+                    <li>No bloated lists of tools</li>
+                    <li>Built around workflows you can actually use</li>
+                    <li>Focused on fast wins you can apply immediately</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Before You Grab It</h2>
+            <div class="faq-item">
+                <h4>Is this another generic AI guide?</h4>
+                <p>No. It's a short, practical guide built around workflows you can actually use – not trends, theory, or bloated tool lists.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Who is this actually for?</h4>
+                <p>Founders, creators, operators, solo builders, and lean teams who want practical leverage from AI - without adding more noise.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do I need a complex AI setup to use it?</h4>
+                <p>No. It's built around simple workflow ideas you can adapt without building a complex AI stack first.</p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>7 practical AI workflows to help you cut repetitive work, move faster, and get more from AI</h2>
+            <p style="color: var(--text-muted); margin-bottom: 40px;">without adding more noise.</p>
+            <form class="email-form" style="max-width: 500px; margin: 0 auto;" action="YOUR_FORMSPREE_OR_MAILERLITE_LINK_HERE" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Get the Free Workflow Guide</button>
+            </form>
+            <p class="microcopy">Free guide. No fluff. No spam.</p>
+        </section>
+    </div>
+
+</body>
+</html>
